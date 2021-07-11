@@ -1,13 +1,12 @@
 import React from 'react'
 import Header from './components/Header.jsx'
+import HeroSection from './components/HeroSection.jsx'
 
 const App = () => {
   return (
     <div>
       <Header />
-      <h1 className="text-center text-2xl font font-semibold">
-        Welcome to our shop
-      </h1>
+      <HeroSection />
     </div>
   )
 }
