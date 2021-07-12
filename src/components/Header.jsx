@@ -5,7 +5,7 @@ const Header = () => {
   const [show, setShow] = useState(false)
   return (
     <nav className="bg-gray-100 w-full flex items-center py-4">
-      <div className="container mx-auto flex flex-col md:flex-row md:justify-between md:items-center">
+      <div className="container mx-auto px-4 lg:px-16 flex flex-col md:flex-row md:justify-between md:items-center">
         <div className="flex justify-between items-center">
           <p className="text-3xl text-gray-700 font-semibold">
             Multi<span className="text-green-500">cone</span>
@@ -24,24 +24,24 @@ const Header = () => {
         </div>
 
         <div
-          className={`px-3 flex-col md:flex-row justify-center items-center bg-gray-100 md:flex transition-all duration-500 ease-in ${
+          className={`flex-col md:flex-row justify-center items-center md:flex transition-all duration-500 ease-in ${
             show ? 'flex' : 'hidden'
           }`}
         >
           <a
-            href="#"
+            href="/home"
             className="md:px-2 py-2 text-gray-700 hover:text-green-500"
           >
             Home
           </a>
           <a
-            href="#"
+            href="/products"
             className="md:px-2 py-2 text-gray-700 hover:text-green-500"
           >
             Products
           </a>
           <a
-            href="#"
+            href="/about"
             className="md:px-2 mb-2 md:mb-0 py-2  text-gray-700 hover:text-green-500"
           >
             About
