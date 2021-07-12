@@ -27,7 +27,7 @@ const HeroSection = () => {
             everyday
           </p>
 
-          <button className="btn-primary block my-8 flex items-center justify-self-center md:justify-self-start">
+          <button className="btn-primary my-8 flex items-center justify-self-center md:justify-self-start">
             <span className="mr-2">
               <FaShoppingCart />
             </span>
