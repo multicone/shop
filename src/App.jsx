@@ -1,13 +1,15 @@
 import React from 'react'
 import Header from './components/Header.jsx'
 import HeroSection from './components/HeroSection.jsx'
-import ItemCard from './components/ItemCard.jsx'
+import TestScreen from './components/TestScreen.jsx'
+
 
 const App = () => {
   return (
     <div>
       <Header />
       <HeroSection />
+      <TestScreen />
     </div>
   )
 }
