@@ -1,18 +1,18 @@
 import React, { useState } from 'react'
-import product from '../assets/images/product.jpg'
+import product from '../assets/images/image.png'
 
 const ItemCard = ({ percent = 20, price = '10.01', deletePrice = '2.00', title = 'Apples' }) => {
     const [Count, setCount] = useState(0)
     return (
-        <div className="w-60 card mx-2 bg-white shadow-md">
-            <div class="relative flex items-center justify-center cursor-pointer w-auto h-48 sm:h-64">
+        <div className="w-60 my-5 card bg-white shadow-md rounded hover:shadow-2xl">
+            <div class="relative flex items-center justify-center cursor-pointer w-auto h-48">
                 <span class="sr-only">Product Image</span>
-                <div style={{ display: 'block', overflow: 'hidden', position: 'absolute', inset: '0px', boxSizing: 'border-box', margin: '0px' }}>
-                    <img src={product} alt="" />
+                <div style={{ display: 'block', overflow: 'hidden', position: 'relative', inset: '0px', boxSizing: 'border-box', margin: '0px' }}>
+                    <img src={product} alt="" width="900px" style={{ zIndex: -1 }} />
                 </div>
                 <div class="absolute top-3 end-3 md:top-4 md:end-4 rounded text-xs leading-6 font-semibold px-1.5 sm:px-2 md:px-2.5 bg-green-600 text-gray-200">{percent}%</div>
             </div>
-            <header class="p-3 md:p-6">
+            <header class="p-6" style={{ zIndex: 10 }} >
                 <div class="flex items-center mb-2">
                     <span class="text-sm md:text-base text-heading font-semibold">${price}</span>
                     <del class="text-xs md:text-sm text-gray-400 mx-2">${deletePrice}</del>
