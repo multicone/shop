@@ -6,8 +6,8 @@ import '../assets/css/hero-svg.css'
 const HeroSection = () => {
   return (
     <div className="hero-sec h-screen w-full py-8">
-      <div className="container mx-auto flex items-center justify-between py-16">
-        <div className="w-1/2">
+      <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between py-16">
+        <div className="md:w-auto sm:w-auto">
           <h1 className="text-gray-700 md:text-5xl text-3xl font-bold py-5">
             Groceries Delivered in 90 Minute
           </h1>
