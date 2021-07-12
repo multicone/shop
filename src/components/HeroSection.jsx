@@ -12,6 +12,7 @@ aos.init({
 
 const HeroSection = () => {
   return (
+    
     <div className="hero-sec h-screen w-full py-4">
       <div className="container mx-auto flex items-center flex-col md:flex-row md:items-start md:justify-between px-4 py-8 lg:py-16 lg:px-16">
         <div
@@ -19,6 +20,7 @@ const HeroSection = () => {
           className="flex flex-col items-center md:items-start lg:mt-16 md:mt-8"
         >
           <h1 className="text-gray-700 lg:text-5xl text-3xl font-bold py-5 text-center md:text-left">
+  
             Groceries Delivered in 90 Minute
           </h1>
 
