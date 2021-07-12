@@ -6,5 +6,11 @@
 
 .hero-svg {
   height: auto;
-  width: 500px;
+  width: 400px;
+}
+
+@media (min-width: 768px) {
+  .hero-svg {
+    width: 600px;
+  }
 }
