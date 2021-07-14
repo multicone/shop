@@ -4,6 +4,8 @@ import HeroSvg from '../assets/images/hero.svg'
 import '../assets/css/hero-svg.css'
 import aos from 'aos'
 import 'aos/dist/aos.css'
+import Lottie from 'react-lottie'
+import animationData from '../lottie/hero'
 
 aos.init({
   duration: 1000,
@@ -11,6 +13,15 @@ aos.init({
 })
 
 const HeroSection = () => {
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice',
+    },
+  }
+
   return (
     <div className="hero-sec h-auto w-full py-4">
       <div className="container mx-auto flex items-center flex-col md:flex-row md:items-start md:justify-between px-4 py-8 lg:py-16 lg:px-16">
@@ -36,7 +47,7 @@ const HeroSection = () => {
         </div>
         {/* SVG */}
         <div data-aos="fade-left">
-          <img src={HeroSvg} alt="hero-svg" className="hero-svg" />
+          <Lottie options={defaultOptions} height={500} width={500} />
         </div>
       </div>
     </div>
