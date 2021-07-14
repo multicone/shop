@@ -1,0 +1,61 @@
+.item-card {
+  position: relative;
+  height: 440px;
+  width: 300px;
+  min-width: 240px;
+}
+
+.card-img {
+  height: 60%;
+  width: 100%;
+  background-color: rgb(238, 238, 238);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+@mixin card-badge {
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  width: 50px;
+  position: absolute;
+  border-radius: 20px;
+  top: 25px;
+  left: 25px;
+}
+
+.card-badge-black {
+  @include card-badge;
+  background-color: rgb(41, 41, 41);
+}
+
+.card-badge-red {
+  @include card-badge;
+  background-color: rgb(255, 97, 97);
+}
+
+.card-para {
+  font-size: 12px;
+  letter-spacing: 0.6px;
+}
+
+.card-desc {
+}
+
+.card-cart {
+  cursor: pointer;
+  background-color: $color-secondary;
+  box-sizing: content-box;
+  padding: 10px;
+  border-radius: 20%;
+  transition: all 0.2s ease-in;
+}
+
+.card-cart:hover {
+  background-color: rgb(255, 232, 128);
+  transform: scale(1.1);
+}
