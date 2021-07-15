@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
+import HeaderUser from './HeaderUser'
 
 const Header = () => {
   const [show, setShow] = useState(false)
+  const [signedIn, setSignedIn] = useState(true)
+
   return (
     <nav className="bg-gray-100 w-full flex items-center py-4">
       <div className="container mx-auto px-4 lg:px-16 flex flex-col md:flex-row md:justify-between md:items-center">
@@ -42,13 +45,17 @@ const Header = () => {
           </a>
           <a
             href="/about"
-            className="md:px-2 mb-2 md:mb-0 py-2  text-gray-700 hover:text-green-500"
+            className="md:px-2 mb-2 md:mb-0 py-2 md:mr-4 text-gray-700 hover:text-green-500"
           >
             About
           </a>
-          <button className="btn-primary transition-all duration-400 ease-in">
-            Sign In
-          </button>
+          {signedIn ? (
+            <HeaderUser />
+          ) : (
+            <button className="btn-primary transition-all duration-400 ease-in">
+              Sign In
+            </button>
+          )}
         </div>
       </div>
     </nav>
