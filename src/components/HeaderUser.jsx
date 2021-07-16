@@ -1,44 +1,76 @@
-import React, { useState } from 'react'
-import { FaUser, FaCog, FaSignOutAlt } from 'react-icons/fa'
+import React from 'react'
+import { Menu, Transition } from '@headlessui/react'
+import { FaUserAlt } from 'react-icons/fa'
 
 const HeaderUser = () => {
-  const [isOpen, setIsOpen] = useState(false)
   return (
-    <div>
-      <button
-        className="w-auto h-10 bg-white rounded-xl px-4 py-2 flex items-center focus:outline-none transition-all duration-500 ease-in-out"
-        onClick={() => setIsOpen(!isOpen)}
+    <Menu>
+      <Menu.Button>
+        <div className="h-8 w-8 rounded-full bg-indigo-400 text-white flex justify-center items-center">
+          <FaUserAlt />
+        </div>
+      </Menu.Button>
+
+      <Transition
+        enter="transition duration-100 ease-out"
+        enterFrom="transform scale-95 opacity-0"
+        enterTo="transform scale-100 opacity-100"
+        leave="transition duration-75 ease-out"
+        leaveFrom="transform scale-100 opacity-100"
+        leaveTo="transform scale-95 opacity-0"
       >
-        <div className="h-8 w-8 rounded-full bg-purple-300 transition-all duration-300 ease-out text-white flex justify-center items-center mr-2">
-          <FaUser />
-        </div>
-        <div>
-          <p className="text-gray-700">Labu</p>
-        </div>
-      </button>
-      {isOpen ? (
-        <div className="bg-white w-48 text-gray-700 flex flex-col justify-center absolute shadow-lg rounded-xl mt-4 py-5 z-10">
-          <a
-            href="#"
-            className=" py-2 px-4 dropdown-link transition-all flex items-center duration-400 ease-in-out hover:text-green-400"
-          >
-            <FaUser className="mr-1" /> Profile
-          </a>
-          <a
-            href="#"
-            className=" py-2 px-4 dropdown-link transition-all flex items-center duration-400 ease-in-out hover:text-green-400"
-          >
-            <FaCog className="mr-1" /> Setting
-          </a>
-          <a
-            href="#"
-            className=" py-2 px-4 dropdown-link transition-all flex items-center duration-400 ease-in-out hover:text-green-400"
-          >
-            <FaSignOutAlt className="mr-1" /> Sign out
-          </a>
-        </div>
-      ) : null}
-    </div>
+        <Menu.Items className="absolute w-48 h-auto bg-white flex flex-col rounded-xl shadow-lg transform -translate-x-36 py-4 px-2 mt-3 z-20 text-sm focus:outline-none">
+          <Menu.Item>
+            {({ active }) => (
+              <a
+                href="#"
+                className={`${
+                  active ? 'bg-green-500 text-white' : 'bg-white text-gray-700'
+                } px-4 py-3 rounded-lg`}
+              >
+                Profile
+              </a>
+            )}
+          </Menu.Item>
+          <Menu.Item>
+            {({ active }) => (
+              <a
+                href="#"
+                className={`${
+                  active ? 'bg-green-500 text-white' : 'bg-white text-gray-700'
+                } px-4 py-3 rounded-lg`}
+              >
+                Checkout
+              </a>
+            )}
+          </Menu.Item>
+          <Menu.Item>
+            {({ active }) => (
+              <a
+                href="#"
+                className={`${
+                  active ? 'bg-green-500 text-white' : 'bg-white text-gray-700'
+                } px-4 py-3 rounded-lg`}
+              >
+                My orders
+              </a>
+            )}
+          </Menu.Item>
+          <Menu.Item>
+            {({ active }) => (
+              <a
+                href="#"
+                className={`${
+                  active ? 'bg-green-500 text-white' : 'bg-white text-gray-700'
+                } px-4 py-3 rounded-lg`}
+              >
+                Sign out
+              </a>
+            )}
+          </Menu.Item>
+        </Menu.Items>
+      </Transition>
+    </Menu>
   )
 }
 
