@@ -1,0 +1,16 @@
+.form-input {
+  width: 350px;
+  padding: 10px 10px;
+  border-radius: 15px;
+  text-align: left;
+}
+
+.form-input:focus {
+  outline: none;
+}
+
+@media (max-width: 767px) {
+  .form-input {
+    width: 100%;
+  }
+}

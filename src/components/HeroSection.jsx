@@ -6,6 +6,7 @@ import aos from 'aos'
 import 'aos/dist/aos.css'
 import Lottie from 'react-lottie'
 import animationData from '../lottie/hero'
+import useWindowDimensions from '../hooks/useWindowDimentions'
 
 aos.init({
   duration: 1000,
@@ -22,12 +23,14 @@ const HeroSection = () => {
     },
   }
 
+  const { height, width } = useWindowDimensions()
+
   return (
     <div className="hero-sec h-auto w-full py-4">
       <div className="container mx-auto flex items-center flex-col md:flex-row md:items-start md:justify-between px-4 py-8 lg:py-16 lg:px-16">
         <div
           data-aos="fade-right"
-          className="flex flex-col items-center md:items-start lg:mt-16 md:mt-8"
+          className="flex flex-col items-center md:items-start lg:mt-16 md:mt-8 md:w-1/2"
         >
           <h1 className="text-gray-700 lg:text-5xl text-3xl font-bold py-5 text-center md:text-left">
             Groceries Delivered in 90 Minute
@@ -46,8 +49,12 @@ const HeroSection = () => {
           </button>
         </div>
         {/* SVG */}
-        <div data-aos="fade-left">
-          <Lottie options={defaultOptions} height={500} width={500} />
+        <div>
+          <Lottie
+            options={defaultOptions}
+            height={width > 1000 ? 500 : 300}
+            width={width > 1000 ? 500 : 300}
+          />
         </div>
       </div>
     </div>
