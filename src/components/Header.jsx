@@ -16,7 +16,7 @@ const Header = () => {
       <div className="container mx-auto px-4 lg:px-16 flex flex-col md:flex-row md:justify-between md:items-center">
         <div className="flex justify-between items-center">
           <p className="lg:text-3xl text-xl text-gray-700 font-semibold">
-            Multi<span className="text-green-500">cone</span>
+            Multi<span style={{ color: '#28DF99' }}>cone</span>
           </p>
 
           <button
@@ -38,25 +38,29 @@ const Header = () => {
         >
           <Link
             to="/"
-            className="md:px-3 py-2 text-gray-700 hover:text-green-500"
+            className="md:px-3 py-2 text-gray-600 font-semibold hover:text-green-500"
+            onClick={() => setShow(false)}
           >
             Home
           </Link>
           <Link
             to="/products"
-            className="md:px-3 py-2 text-gray-700 hover:text-green-500"
+            className="md:px-3 py-2 text-gray-600 font-semibold hover:text-green-500"
+            onClick={() => setShow(false)}
           >
             Products
           </Link>
           <Link
             to="/faq"
-            className="md:px-3 py-2 text-gray-700 hover:text-green-500"
+            className="md:px-3 py-2 text-gray-600 font-semibold hover:text-green-500"
+            onClick={() => setShow(false)}
           >
             FAQs
           </Link>
           <Link
             to="/contact"
-            className="md:px-3 mb-2 lg:mr-5 md:mb-0 py-2 text-gray-700 hover:text-green-500"
+            className="md:px-3 mb-2 lg:mr-5 md:mb-0 py-2 text-gray-600 font-semibold hover:text-green-500"
+            onClick={() => setShow(false)}
           >
             Contact
           </Link>

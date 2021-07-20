@@ -1,3 +1,18 @@
+.btn-primary {
+  font-family: $poppins;
+  background-color: $color-primary;
+  padding: 10px 20px;
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: all 0.4s ease-in-out;
+}
+
+.btn-primary:hover {
+  filter: brightness(110%);
+}
+
+// form input style
 .form-input {
   width: 350px;
   padding: 10px 10px;
