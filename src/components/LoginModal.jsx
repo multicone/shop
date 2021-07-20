@@ -34,7 +34,7 @@ const LoginModal = (props) => {
               : 'Already have an account?'}
             <a
               href="#"
-              className="text-sm text-green-500 hover:underline my-2 block"
+              className="text-sm text-green-500 hover:underline my-2 ml-2"
               onClick={() => props.setShowRegister(!props.showRegister)}
             >
               {!props.showRegister ? 'Register' : 'Login now'}

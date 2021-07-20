@@ -27,10 +27,7 @@ const Login = () => {
         className="form-input bg-gray-100"
       />{' '}
       <br />
-      <a
-        href="#"
-        className="text-xs text-green-500 hover:underline my-2 mb-4 block"
-      >
+      <a href="#" className="text-xs text-green-500 hover:underline my-3 mb-4">
         Forgot password?
       </a>
       <button className="btn-primary w-full rounded-2xl block my-6">
