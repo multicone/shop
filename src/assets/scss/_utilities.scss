@@ -11,6 +11,9 @@
 .btn-primary:hover {
   filter: brightness(110%);
 }
+.btn-primary:focus {
+  outline: none;
+}
 
 // form input style
 .form-input {

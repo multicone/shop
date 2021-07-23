@@ -5,7 +5,7 @@ import { FaUserAlt } from 'react-icons/fa'
 const HeaderUser = () => {
   return (
     <Menu>
-      <Menu.Button>
+      <Menu.Button className="focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 rounded-full">
         <div className="h-8 w-8 rounded-full bg-indigo-400 text-white flex justify-center items-center">
           <FaUserAlt />
         </div>
