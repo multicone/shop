@@ -8,7 +8,7 @@ const Accordion = ({ title, content }) => {
   return (
     <div className="w-full mb-6">
       <div
-        className="flex justify-between bg-gray-200 px-8 py-4 text-sm rounded-lg cursor-pointer"
+        className="flex justify-between bg-gray-100 px-8 py-4 text-sm rounded-lg cursor-pointer"
         onClick={() => setIsActive(!isActive)}
       >
         <div>

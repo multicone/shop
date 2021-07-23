@@ -7,7 +7,7 @@ import LoginModal from './LoginModal'
 
 const Header = () => {
   const [show, setShow] = useState(false)
-  const [signedIn, setSignedIn] = useState(false)
+  const [signedIn, setSignedIn] = useState(true)
   const [modalShow, setModalShow] = useState(false)
   const [showRegister, setShowRegister] = useState(false)
 
@@ -38,28 +38,28 @@ const Header = () => {
         >
           <Link
             to="/"
-            className="md:px-3 py-2 text-gray-600 font-semibold hover:text-green-500"
+            className="md:px-3 py-2 text-gray-600 font-semibold hover:text-green-500 focus:outline-none"
             onClick={() => setShow(false)}
           >
             Home
           </Link>
           <Link
             to="/products"
-            className="md:px-3 py-2 text-gray-600 font-semibold hover:text-green-500"
+            className="md:px-3 py-2 text-gray-600 font-semibold hover:text-green-500 focus:outline-none"
             onClick={() => setShow(false)}
           >
             Products
           </Link>
           <Link
             to="/faq"
-            className="md:px-3 py-2 text-gray-600 font-semibold hover:text-green-500"
+            className="md:px-3 py-2 text-gray-600 font-semibold hover:text-green-500 focus:outline-none"
             onClick={() => setShow(false)}
           >
             FAQs
           </Link>
           <Link
             to="/contact"
-            className="md:px-3 mb-2 lg:mr-5 md:mb-0 py-2 text-gray-600 font-semibold hover:text-green-500"
+            className="md:px-3 mb-2 lg:mr-5 md:mb-0 py-2 text-gray-600 font-semibold active:ring-0 hover:text-green-500 focus:outline-none"
             onClick={() => setShow(false)}
           >
             Contact
@@ -69,7 +69,7 @@ const Header = () => {
               <HeaderUser />
             ) : (
               <button
-                className="btn-primary transition-all duration-400 ease-in mx-2"
+                className="btn-primary transition-all duration-400 ease-in mx-2 focus:outline-none focus:ring-1 focus:ring-green-400 focus:ring-offset-2"
                 onClick={() => {
                   setModalShow(true)
                   setShowRegister(false)
